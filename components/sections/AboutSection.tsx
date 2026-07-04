@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import Silk from "@/components/backgrounds/Silk/Silk";
 import { about } from "@/data/portfolio";
@@ -24,7 +25,7 @@ export default function ˀAboutSection() {
       <motion.div
         ref={contentRef}
         style={{ opacity, scale }}
-        className="relative z-10 max-w-5xl mx-auto px-6 md:px-12 py-24 grid md:grid-cols-2 gap-16 items-center"
+        className="relative z-10 max-w-5xl mx-auto px-6 md:px-12 py-24 grid md:grid-cols-2 gap-8 items-center"
       >
         {/* Avatar placeholder */}
         <motion.div
@@ -34,10 +35,17 @@ export default function ˀAboutSection() {
           className="flex justify-center md:justify-start"
         >
           <div
-            className="w-48 h-48 md:w-64 md:h-64 rounded-full glow-border flex items-center justify-center text-6xl"
-            style={{ background: "linear-gradient(135deg, var(--accent-primary), var(--accent-secondary))", border: "2px solid color-mix(in srgb, var(--accent-primary) 50%, transparent)" }}
+            className="relative w-64 h-64 md:w-80 md:h-80 rounded-full glow-border overflow-hidden"
+            style={{ border: "2px solid color-mix(in srgb, var(--accent-primary) 50%, transparent)" }}
           >
-            👤
+            <Image
+              src="/avatar3.jpeg"
+              alt="Swati Mohanty"
+              fill
+              sizes="(min-width: 768px) 320px, 256px"
+              className="object-cover"
+              priority
+            />
           </div>
         </motion.div>
 
