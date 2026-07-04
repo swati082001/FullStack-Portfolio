@@ -29,7 +29,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} dark antialiased`}
       style={{ backgroundColor: "var(--bg-deep)" }}
     >
-      <body className="min-h-screen overflow-x-hidden">
+      <body className="min-h-screen overflow-x-hidden" suppressHydrationWarning>
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
